@@ -1,0 +1,26 @@
+{
+  "name": "tcpioneer",
+  "version": "1.0.0",
+  "description": "TCPIOneer monorepo",
+  "private": true,
+  "scripts": {
+    "build": "npm --workspace @tcpioneer/core run build && npm --workspace @tcpioneer/cli run build",
+    "start": "npm run build && npm --workspace @tcpioneer/cli start",
+    "test": "npm run build"
+  },
+  "keywords": [
+    "tcpioneer",
+    "remote-desktop",
+    "cli",
+    "monorepo"
+  ],
+  "author": "Byte-ByByte",
+  "license": "MIT",
+  "type": "commonjs",
+  "workspaces": [
+    "packages/*"
+  ],
+  "allowScripts": {
+    "esbuild@0.27.2": true
+  }
+}
